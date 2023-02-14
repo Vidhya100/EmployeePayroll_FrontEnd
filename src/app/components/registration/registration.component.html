@@ -1,0 +1,58 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+
+    <div class="logo-img">
+        <img class="img1" src="../../../assets/logo.jpg">
+    </div>
+
+    <div class="register-login" fxLayout="column" fxLayoutAlign="space-evenly center">
+
+        <div class="header" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="82px">
+            <!-- <div> -->
+                <!-- <button class="login" routerLink="/login">LOGIN</button> -->
+            <!-- </div> -->
+            <div class="signup-div">
+                <button class="signup">SIGNUP</button>
+            </div>
+        </div>
+
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="formgrp">
+            <div class="textbox" fxLayout="column" fxLayoutAlign="start start">
+                <mat-label>First Name</mat-label>
+                <mat-form-field appearance="outline" class="txtfield">
+                    <input matInput type="text" formControlName="firstname" style="height:35px;width:252px;">
+                    <mat-error>Enter valid Name</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox" fxLayout="column" fxLayoutAlign="start start">
+                <mat-label>Last Name</mat-label>
+                <mat-form-field appearance="outline" class="txtfield">
+                    <input matInput type="text" formControlName="lastname" style="height:35px;width:252px;">
+                    <mat-error>Enter valid Name</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox" fxLayout="column" fxLayoutAlign="start start">
+                <mat-label>Email Id</mat-label>
+                <mat-form-field appearance="outline" class="txtfield">
+                    <input matInput type="email" formControlName="email" style="height:35px;width:252px;">
+                    <mat-error>Enter valid email</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="textbox" fxLayout="column" fxLayoutAlign="start start">
+                <mat-label>Password</mat-label>
+                <mat-form-field appearance="outline" class="txtfield">
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button mat-icon-button type="button" matSuffix (click)="hide = !hide">
+                        <mat-icon style="color:#9D9D9D">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error>Enter valid password</mat-error>
+                </mat-form-field>
+              </div>
+
+            <button mat-button type="submit" class="btn-primary signup"
+                style="background-color: #A03037;" >Signup</button>
+        </form>
+    </div>
+</div>

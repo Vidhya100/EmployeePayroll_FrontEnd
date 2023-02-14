@@ -1,0 +1,114 @@
+mat-error {
+    height: 17px;
+    text-align: left;
+    font: normal normal normal 8px/10px Roboto;
+    letter-spacing: 0px;
+    color: #FF001C;
+    margin-top: -5px;
+}
+
+.container{
+    //background-color: #000000 0% 0% no-repeat padding-box;;
+    //width: 1366px;
+height: 720px;
+overflow:hidden;
+position:relative;
+background-image: linear-gradient(to right,#ff5722, #ff9800);
+  }
+.img1{
+    width: 245px;
+    height: 245px;
+    border-radius: 40%;
+    //margin-left: 50px;
+    padding: 52px 53px;
+}
+
+.logo-img {
+    position:relative;
+z-index:1; 
+width: 700px;
+height: 420px;
+margin-top: 55px;
+//background: #F5F5F5 0% 0% no-repeat padding-box;
+//border-radius: 21px;
+}
+
+.register-login {
+    position: absolute;
+    z-index: 2;
+    margin-left: 320px;
+    width: 400px;
+    height: 425px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #00000029;
+    border: 1px solid #E4E4E4;
+    border-radius: 60% 6px 6px 60%;
+}
+
+.emaiId{
+    z-index : 15;
+}
+
+.text {
+    text-align: left;
+    font: normal normal medium 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    text-transform: uppercase;
+    margin-top: -10px;
+    margin-left: 80px;
+}
+
+.login {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #878787;
+    border: none;
+    background: transparent;
+}
+
+.signup {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    border: none;
+    background: transparent;
+    color: #0A0102;
+}
+.btn-primary {
+    width: 252px;
+    height: 37px;
+    /* UI Properties */
+    background: #A03037 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+    border: transparent;
+
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+  .password{
+    height:42px;
+  }
+  input .emailInput{
+    height: 37px;
+    width:292px;
+  }
+  mat-form-field{
+    width: 100%;
+  }
+
+   ::ng-deep .mat-mdc-text-field-wrapper {
+      height: 35px !important;
+      margin-top: 0px !important;
+     align-items: center !important;
+   }
+  
