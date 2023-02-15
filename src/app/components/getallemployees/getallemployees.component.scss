@@ -1,0 +1,37 @@
+// .container{
+//     height:100%;
+//     width:100%;
+//     background-image: linear-gradient(to right, cyan);
+// }
+.btn{
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: #81B622;
+    color: white;
+}
+.demo-table {
+    width: 100%;
+    border: 1px solid black;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  .mat-mdc-table{
+    background-color: #808080;
+    color:white
+  }
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
