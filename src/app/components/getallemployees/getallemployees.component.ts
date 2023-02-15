@@ -8,13 +8,11 @@ import { EmpService } from 'src/app/services/Emp/emp.service';
 })
 export class GetallemployeesComponent  implements OnInit{
   
-  Name: any;
-  Gender: any;
-  Department: any;
-  salary: any;
-  startDate: any;
-  EmpList: any
-  submitted=false;
+  
+  EmpList: any=[];
+  deptArray:any=[];
+  department:any=[];
+
 
   constructor(private empService: EmpService){
 
@@ -23,15 +21,13 @@ export class GetallemployeesComponent  implements OnInit{
     this.getAllEmployees();
   }
  
-  displayedColumns: string[] = ['EmpId', 'Name', 'Gender', 'Department', 'Salary', 'Start Date', 'Action'];
+
   getAllEmployees(){
     this.empService.getallemployees().subscribe((response:any)=>{
       console.log(response);
-      this.EmpList = response.data;
+       this.EmpList= response.data;
+      //console.log(this.EmpList);
     })
-  }
-  clickedRows(){
-    this.submitted=true;
   }
 
   

@@ -1,8 +1,9 @@
-// .container{
+// .maincontainer{
 //     height:100%;
 //     width:100%;
 //     background-image: linear-gradient(to right, cyan);
 // }
+/*
 .btn{
     margin-left: 40px;
     margin-top: 30px;
@@ -34,4 +35,198 @@
   
   .demo-row-is-clicked {
     font-weight: bold;
-  }
+  }*/
+  .colorAll{
+    color: #42515F;
+}
+.mainContainer {
+    background-color: #E2E2E2;
+    height: auto;
+    width: 100vw;
+}
+
+.addcontainer {
+    height: 16vh;
+    width: 80vw;
+    position: relative;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailsSearch {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    height: 50px;
+    color: #42515F;
+    font-weight: 600;
+}
+
+.searchbar {
+    width: 30vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: 10.5vw;
+    height: 50px;
+    justify-content: flex-end;
+}
+
+.inpfield {
+    height: 40px;
+    width: 30vw;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    box-shadow: 0px 1px 5px gray;
+    background-color: #FFFFFF;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.searchAdd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 17vw;
+    height: 50px;
+}
+
+.icon {
+    background-color: #FFFFFF;
+    // border-radius: 0px 15px 15px 0px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 41px;
+    width: 50px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.iconserch {
+    height: 30px;
+}
+
+.buttonAdd {
+    color: #E2E2E2 !important;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+
+}
+
+.colorbtn {
+    background-color: #82A70C;
+    color: #E2E2E2 !important;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    font-size: 20px;
+    height: 40px;
+}
+
+.plus {
+    font-size: 25px;
+    width: 20px;
+    height: 20px;
+}
+  .tablecontainer {
+    height: auto;
+    width: 80vw;
+    position: relative;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 0 3px;
+}
+
+td {
+    align-items: center;
+    position: relative;
+    padding-left: 10px;
+    height: 7vh;
+    font-size: 16px;
+}
+
+th {
+    background-color: #42515F;
+    color: white;
+    height: 7vh;
+    font-size: 15px;
+    text-align: center;
+}
+
+tr {
+    background-color: white;
+}
+
+.nametxt {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 65px;
+}
+
+.depp {
+    width: 350px;
+}
+
+.namePofile {
+    display: flex;
+    align-items: center;
+
+}
+
+.clubdept {
+    text-align: start;
+    padding-left: 130px;
+
+}
+
+.profileimg {
+    width: 32px;
+    padding-left: 10px;
+    margin-right: 15px;
+}
+
+.multidept {
+    background: #badb71;
+    padding: 7px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.salarylogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 3px;
+}
+
+.rupee {
+    height: 20px;
+}
+
+.twoIcons {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.point {
+    cursor: pointer;
+}

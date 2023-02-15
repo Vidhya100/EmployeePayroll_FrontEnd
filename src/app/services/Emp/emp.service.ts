@@ -22,5 +22,18 @@ export class EmpService {
     }
     return this.httpService.getService('/Emp/Get', true, header)
   }
+
+  addEmployee(reqdata:any){
+    console.log(this.token)
+    console.log(reqdata)
+    let headers = {
+      headers: new HttpHeaders(
+        {
+          'Content-Type' : 'application/json' ,
+          'Authorization' :'Bearer '+this.token 
+        })
+    }
+    return this.httpService.postService('/Emp/Add',reqdata,true,headers)
+  }
   
 }

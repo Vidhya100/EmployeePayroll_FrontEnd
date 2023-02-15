@@ -1,62 +1,56 @@
-<div class="container">
-    <div class="sub_container">
-        <div class="btn" fxLayout="row" fxLayoutAlign="space-between center">
-            <h2>Employee Payroll</h2>
-            <button mat-raised-button class="addbtn">Add Employee</button>
-        </div>
-        <table mat-table  class="mat-elevation-z8 demo-table">
-            <!-- Position Column -->
-            
-            <ng-container matColumnDef="EmpId">
-              <th class="theader" mat-header-cell *matHeaderCellDef>No.</th>
-              <td mat-cell *matCellDef="let element">{{element.EmpId}}</td>
-            </ng-container>
-          
-            <!-- Name Column -->
-            <ng-container matColumnDef="Name">
-              <th class="theader" mat-header-cell *matHeaderCellDef>Name</th>
-              <td mat-cell *matCellDef="let element">{{element.name}}</td>
-            </ng-container>
-          
-            <!-- Weight Column -->
-            <ng-container matColumnDef="Gender">
-              <th class="theader" mat-header-cell *matHeaderCellDef>Gender</th>
-              <td mat-cell *matCellDef="let element">{{element.gender}}</td>
-            </ng-container>
-          
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="Department">
-              <th class="theader" mat-header-cell *matHeaderCellDef>Department</th>
-              <td mat-cell *matCellDef="let element">{{element.department}}</td>
-            </ng-container>
-
-            <ng-container matColumnDef="Salary">
-                <th class="theader" mat-header-cell *matHeaderCellDef>Salary</th>
-                <td mat-cell *matCellDef="let element">{{element.salary}}</td>
-              </ng-container>
-            
-              <ng-container matColumnDef="Start Date">
-                <th class="theader" mat-header-cell *matHeaderCellDef>Start Date</th>
-                <td mat-cell *matCellDef="let element">{{element.startDate}}</td>
-              </ng-container>
-
-              <ng-container matColumnDef="Action">
-                <th class="theader" mat-header-cell *matHeaderCellDef>Action</th>
-                <td mat-cell *matCellDef="let element">{{element.symbol}}</td>
-              </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-         
-            <tr
-                mat-row
-                *ngFor="let row of EmpList"
-                
-            ><button mat-icon-button color="blue" aria-label="Example icon button with a heart icon">
-              <mat-icon>Delete</mat-icon>
-              <mat-icon>Edit</mat-icon>
-            </button></tr>
-          
-          </table>
+<div class="colorAll">
+<div class="maincontainer">
+  <div class="addcontainer">
+    <div class="detailsSearch">
+      Employee Details
     </div>
-</div>
+    <div class="searchbar">
+      <input class="inpfield" placeholder="Search...">
+    </div>
+    <div class="searchAdd">
+      <div class="icon">
+        <img src="/assets/searchicon.svg" class="iconserch">
+      </div>
+      <div class="buttonAdd">
+        <button mat-button class="colorbtn" routerLink="/dashboard/empForm">
+          <span class="plus"> + </span>
+          <span> Add User</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="tablecontainer">
+    <table style="text-align: center;">
+      <tr>
+        <th>EmpId</th>
+        <th class="nametxt">Name</th>
+        <th>Gender</th>
+        <th class="depp">Department</th>
+        <th>Salary</th>
+        <th>Start date</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let emp of EmpList ">
+        <td>{{emp.empId}}</td>
 
+        <td class="namePofile"><img [src]="emp.profileImage" class="profileimg"> {{emp.empName}}</td>
+        <td>{{emp.gender}}</td>
+        <td class="clubdept">
+          <span class="multidept"> {{emp.department}} </span>
+        </td>
+        <td class="salarylogo">
+          <img src="/assets/rupee.png" class="rupee">
+          {{emp.salary}}
+        </td>
+        <td>{{emp.startDate | date:'dd-MMM-yyyy'}}</td>
+        <td>
+          <div class="twoIcons">
+            <img src="/assets/trash.png" class="point">
+            <img src="/assets/edit.png" class="point">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
