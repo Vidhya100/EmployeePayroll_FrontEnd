@@ -13,6 +13,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +25,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetallemployeesComponent } from './components/getallemployees/getallemployees.component';
 import { EmpFormComponent } from './components/emp-form/emp-form.component';
+import { UpdateComponentComponent } from './components/update-component/update-component.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { EmpFormComponent } from './components/emp-form/emp-form.component';
     LoginComponent,
     DashboardComponent,
     GetallemployeesComponent,
-    EmpFormComponent
+    EmpFormComponent,
+    UpdateComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,10 @@ import { EmpFormComponent } from './components/emp-form/emp-form.component';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

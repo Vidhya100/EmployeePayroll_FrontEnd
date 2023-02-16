@@ -54,7 +54,7 @@ export class EmpFormComponent {
    const department: FormArray = this.employeeform.get('department') as FormArray;
 
     if (isChecked) {
-      department.push(new FormControl(JSON.stringify(id)));
+      department.push(new FormControl(id));
       //const selectDept = JSON.stringify(department);
     } else {
       const index = department.controls.findIndex(x => x.value === id);

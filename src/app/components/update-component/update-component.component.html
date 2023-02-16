@@ -1,0 +1,95 @@
+<h2 mat-dialog-title>Update Employee Details</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+  <form [formGroup]="dialogForm" (ngSubmit)="onSubmit()">
+    <div class="formDataBox">
+        <div class="name">
+            <label class="txtname">Name:</label>
+            <div class="txtbox">
+                <mat-form-field appearance="outline" class="txtfield">
+                    <input matInput placeholder="" formControlName="name" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="name">
+            <label class="txtname">Profile Image :</label>
+            <div class="radiocontent">
+                <label class="radioprof">
+                    <input type="radio" id="Profile1" formControlName="profileImage" name="profileImage"
+                        value="/assets/profile-images/Ellipse -3.png">
+                    <img class="profile" id="Profile1" src="../../../assets/profile-images/Ellipse -3.png">
+                </label>
+                <label class="radioprof">
+                    <input type="radio" id="Profile2" formControlName="profileImage" name="profileImage"
+                        value="/assets/profile-images/Ellipse -10.png">
+                    <img class="profile" id="Profile2" src="../../../assets/profile-images/Ellipse -10.png">
+                </label>
+                <label class="radioprof">
+                    <input type="radio" id="Profile3" formControlName="profileImage" name="profileImage"
+                        value="/assets/profile-images/Ellipse -9.png">
+                    <img class="profile" id="Profile3" src="../../../assets/profile-images/Ellipse -9.png">
+                </label>
+                <label class="radioprof">
+                    <input type="radio" id="Profile4" formControlName="profileImage" name="profileImage"
+                        value="/assets/profile-images/Ellipse -5.png">
+                    <img class="profile" id="Profile4" src="../../../assets/profile-images/Ellipse -5.png">
+                </label>
+            </div>
+        </div>
+        <div class="name">
+            <label class="txtname" for="gender">Gender :</label>
+            <div class="radiocontent">
+                <label class="radioprof">
+                    <input type="radio" formControlName="gender" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                </label>
+                <label class="radioprof">
+                    <input type="radio" formControlName="gender" id="female" name="gender" value="FeMale">
+                    <label for="female">Female</label>
+                </label>
+            </div>
+        </div>
+        <div class="name">
+            <label class="txtname" for="department">Department:</label>
+            <div class="chkbox" *ngFor="let dept of deptArray">
+                <input class="nameofdept" type="checkbox" formArrayName="department" [name]="dept.deptname"
+                (change)="onChange($event)" [checked]="dept.checked" [value]="dept.deptname">
+            <label >{{dept.deptname}}</label>
+            </div>
+        </div>
+        <div class="name">
+            <label class="txtname" for="salary">Salary :</label>
+            <mat-form-field appearance="outline">
+                <mat-select placeholder="Select Salary" formControlName="salary">
+                    <mat-option value="10000">10000</mat-option>
+                    <mat-option value="20000">20000</mat-option>
+                    <mat-option value="30000">30000</mat-option>
+                    <mat-option value="40000">40000</mat-option>
+                    <mat-option value="50000">50000</mat-option>
+                    <mat-option value="60000">60000</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="name">
+            <label class="txtname" for="date">Start Date :</label>
+            <mat-form-field appearance="outline">
+                <input matInput formControlName="date" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+        </div>
+        <div class="txtareabox">
+            <label class="txtname" for="inputnotes">Notes:</label>
+            <textarea type="text" placeholder="Type your message here..."
+                formControlName="inputnotes"></textarea>
+        </div>
+    </div>
+
+    <mat-dialog-actions class="btnx">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button [mat-dialog-close]="true" type="submit" cdkFocusInitial class="updateBtn">Update</button>
+    </mat-dialog-actions>
+</form>
+</div>
+</mat-dialog-content>

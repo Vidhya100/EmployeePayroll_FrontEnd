@@ -24,8 +24,8 @@ export class EmpService {
   }
 
   addEmployee(reqdata:any){
-    //console.log(this.token)
-    console.log(reqdata)
+    //const body = JSON.stringify(reqdata)
+    //console.log(body)
     let header = {
       headers: new HttpHeaders(
         {
@@ -45,5 +45,15 @@ export class EmpService {
       )
     }
     return this.httpService.deleteService('/Emp/Delete?empId='+empId,true,header);
+  }
+
+  UpdateEmployee(empId:any,data:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+      })
+    }
+    return this.httpService.putService('/Emp/Update?empId='+empId,data,true,header);
   }
 }

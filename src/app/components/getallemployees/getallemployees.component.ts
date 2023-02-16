@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { EmpService } from 'src/app/services/Emp/emp.service';
+import { UpdateComponentComponent } from '../update-component/update-component.component';
 
 @Component({
   selector: 'app-getallemployees',
@@ -14,7 +16,7 @@ export class GetallemployeesComponent  implements OnInit{
   department:any=[];
 
 
-  constructor(private empService: EmpService){
+  constructor(private empService: EmpService,public dialog: MatDialog){
 
   }
   ngOnInit(): void {
@@ -37,5 +39,14 @@ export class GetallemployeesComponent  implements OnInit{
     })
   }
   
+  openDialog(empObj:object) {
+    const dialogRef = this.dialog.open(UpdateComponentComponent,{
+      data:empObj
+    })
+
+    dialogRef.afterClosed().subscribe((response:object) => {
+      console.log(`Dialog result: ${response}`);
+    });
+  }
   
 }
