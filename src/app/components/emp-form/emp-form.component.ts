@@ -54,27 +54,31 @@ export class EmpFormComponent {
    const department: FormArray = this.employeeform.get('department') as FormArray;
 
     if (isChecked) {
-      department.push(new FormControl(id));
+      department.push(new FormControl(JSON.stringify(id)));
+      //const selectDept = JSON.stringify(department);
     } else {
       const index = department.controls.findIndex(x => x.value === id);
       department.removeAt(index);
     }
   }
 
-  datasubmit(){
-    console.log("submit works")
+  OnSubmit(){
+    this.submitted = true;
+
+    if(this.employeeform.valid){
     let payload = {
-      name: this.employeeform.value.name,
-      profileImage: this.employeeform.value.profileImage,
+      empName: this.employeeform.value.name,
+      profileImg: this.employeeform.value.profileImage,
       department: this.employeeform.value.department,
       gender: this.employeeform.value.gender,
       salary: this.employeeform.value.salary,
-      date: this.employeeform.value.date,
-      inputnotes: this.employeeform.value.inputnotes,
+      startDate: this.employeeform.value.date,
+      Notes: this.employeeform.value.inputnotes,
     }
     console.log(payload)
     this.empservice.addEmployee(payload).subscribe((response:Object)=>{
         console.log(response)
       })
   }
+}
 }

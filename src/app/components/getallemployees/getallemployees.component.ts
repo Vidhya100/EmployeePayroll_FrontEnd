@@ -30,6 +30,12 @@ export class GetallemployeesComponent  implements OnInit{
     })
   }
 
+  deleteEmployee(empId:any){
+    return this.empService.deleteEmployee(empId).subscribe((response:Object)=>{
+      console.log(response)
+      this.getAllEmployees();
+    })
+  }
   
   
 }
