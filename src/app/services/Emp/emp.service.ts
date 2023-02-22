@@ -25,7 +25,7 @@ export class EmpService {
 
   addEmployee(reqdata:any){
     //const body = JSON.stringify(reqdata)
-    //console.log(body)
+    console.log(reqdata)
     let header = {
       headers: new HttpHeaders(
         {

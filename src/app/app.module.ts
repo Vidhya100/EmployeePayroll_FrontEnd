@@ -39,7 +39,7 @@ import { UpdateComponentComponent } from './components/update-component/update-c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     MatSnackBarModule,
     MatFormFieldModule,
     MatIconModule,

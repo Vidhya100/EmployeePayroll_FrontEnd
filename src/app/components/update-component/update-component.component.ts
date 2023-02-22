@@ -51,7 +51,7 @@ export class UpdateComponentComponent {
       inputnotes: ['', [Validators.required]],
 
     })
-    this.updatePatch();
+   // this.updatePatch();
     this.getDeptList();
   }
   get f() { return this.dialogForm.controls; }
